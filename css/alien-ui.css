@@ -1,0 +1,984 @@
+﻿@CHARSET "UTF-8";
+
+.forbid-select{
+	-moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;    
+}
+
+.alien-clear{
+	clear: both;
+}
+
+/*header控件*/
+.alien-header{
+	margin-bottom: 5px;
+}
+
+.alien-header>.text{
+	float: left;
+	color: #333333;
+	font-weight: 500;
+	margin-right: 10px;
+}
+
+.alien-header>.decoration{
+	float: left;
+	display:block;
+	border-left: 5px solid #f67b5a;
+	background-color: transparent;
+	margin-right: 5px;
+}
+
+/*textbox控件*/
+.alien-textbox{
+	font-size: 15px;
+	color: #333333;
+	background-color: #e5e5e5;
+	padding: 0px 15px 0px 15px;
+	border: none;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	-ms-border-radius: 2px;
+	box-shadow: 0px 0px 0px #aaaaaa;
+	-webkit-box-shadow: 0px 0px 0px #aaaaaa;
+	-moz-box-shadow: 0px 0px 0px #aaaaaa;
+	-o-box-shadow: 0px 0px 0px #aaaaaa;
+	-ms-box-shadow: 0px 0px 0px #aaaaaa;
+	transition: box-shadow 0.2s;
+	-o-transition: box-shadow 0.2s;
+	-ms-transition: box-shadow 0.2s;
+	-moz-transition: box-shadow 0.2s;
+	-webkit-transition: box-shadow 0.2s;
+}
+
+
+.alien-textbox:focus {
+	background-color: #efefef;
+	box-shadow: 0px 0px 2px #f67b5a;
+	-webkit-box-shadow: 0px 0px 2px #f67b5a;
+	-moz-box-shadow: 0px 0px 2px #f67b5a;
+	-ms-box-shadow: 0px 0px 2px #f67b5a;
+	-o-box-shadow: 0px 0px 2px #f67b5a;
+}
+
+/*searchbox控件*/
+.alien-searchbox{
+	position: relative;
+	padding: 0px;
+}
+
+.alien-searchbox>input{
+	width: 100%;
+	font-size: 15px;
+	color: #333333;
+	height: 40px;
+	background-color: #e5e5e5;
+	padding: 0px 40px 0px 15px;
+	border: none;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	-ms-border-radius: 2px;
+	box-shadow: 0px 0px 0px #aaaaaa;
+	-webkit-box-shadow: 0px 0px 0px #aaaaaa;
+	-moz-box-shadow: 0px 0px 0px #aaaaaa;
+	-o-box-shadow: 0px 0px 0px #aaaaaa;
+	-ms-box-shadow: 0px 0px 0px #aaaaaa;
+	transition: box-shadow 0.2s;
+	-o-transition: box-shadow 0.2s;
+	-ms-transition: box-shadow 0.2s;
+	-moz-transition: box-shadow 0.2s;
+	-webkit-transition: box-shadow 0.2s;
+	box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+
+.alien-searchbox>input:focus {
+	background-color: #efefef;
+	box-shadow: 0px 0px 2px #f67b5a;
+	-webkit-box-shadow: 0px 0px 2px #f67b5a;
+	-moz-box-shadow: 0px 0px 2px #f67b5a;
+	-ms-box-shadow: 0px 0px 2px #f67b5a;
+	-o-box-shadow: 0px 0px 2px #f67b5a;
+}
+
+.alien-searchbox>a{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: block;
+	background: url(../image/icon/search.png) center center no-repeat transparent;
+	height: 40px;
+	width: 40px;
+	border-radius: 0px 3px 3px 0px;
+	-o-border-radius: 0px 3px 3px 0px;
+	-ms-border-radius: 0px 3px 3px 0px;
+	-moz-border-radius: 0px 3px 3px 0px;
+	-webkit-border-radius: 0px 3px 3px 0px;
+}
+
+.alien-searchbox>a:hover{
+	background: url(../image/icon/search_hover.png) center center no-repeat transparent;
+}
+
+/*combobox下拉框控件*/
+.alien-combobox{
+	position: relative;
+}
+
+.alien-combobox>.alien-combobox-toggle{
+	cursor: pointer;
+	padding-left: 15px;
+	line-height: 40px;
+	position: relative;
+	height: 40px;
+	display: block;
+	background-color: #e5e5e5;
+	border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+}
+
+.alien-combobox>.alien-combobox-toggle:hover{
+	background-color: #efefef;
+	box-shadow: 0px 0px 2px #f67b5a;
+	-webkit-box-shadow: 0px 0px 2px #f67b5a;
+	-moz-box-shadow: 0px 0px 2px #f67b5a;
+	-ms-box-shadow: 0px 0px 2px #f67b5a;
+	-o-box-shadow: 0px 0px 2px #f67b5a;
+}
+
+.alien-combobox>.alien-combobox-toggle:hover>.button{
+	background-color: #f3a894;
+}
+
+.alien-combobox>.alien-combobox-toggle>.text{
+	color: #333333;
+	font-size: 15px;
+}
+
+.alien-combobox>.alien-combobox-toggle>.button{
+	position: absolute;
+	z-index: 10;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	right: 0px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 15px;
+	background:url(../image/icon/arrow_down_m.png) center center no-repeat #f67b5a;
+	border-radius: 0px 3px 3px 0px;
+	-o-border-radius: 0px 3px 3px 0px;
+	-ms-border-radius: 0px 3px 3px 0px;
+	-moz-border-radius: 0px 3px 3px 0px;
+	-webkit-border-radius: 0px 3px 3px 0px;
+}
+
+.alien-combobox>.alien-combobox-option{
+	filter:alpha(opacity=0); /*IE滤镜，透明度0%*/
+    -moz-opacity:0; /*Firefox私有，透明度0%*/
+	opacity:0;/*其他，透明度0%*/
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	margin: 40px 0px 0px 0px;
+	padding: 10px 0px 10px 0px;
+	background-color: #f67b5a;
+	border-radius: 3px;
+	transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-webkit-transition: all 0.3s ease-out 0s;
+}
+
+.open-status>.alien-combobox-option{
+	z-index: 100;
+	filter:alpha(opacity=100); /*IE滤镜，透明度100%*/
+    -moz-opacity:1; /*Firefox私有，透明度100%*/
+	opacity:1;/*其他，透明度100%*/
+	margin-top: 20px;
+}
+
+.alien-combobox>.alien-combobox-option>.arrow{
+	position: absolute;
+	top: -6px;
+	right: 8px;
+	width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #f67b5a;
+}
+
+.alien-combobox>.alien-combobox-option>li{
+	cursor: pointer;
+	padding: 10px 10px 10px 15px;
+	color: #ffffff;
+	list-style-type : none;
+	transition: all 0.2s;
+    -moz-transition: all 0.2s; /* Firefox 4 */
+    -webkit-transition: all 0.2s; /* Safari 和 Chrome */
+    -o-transition: all 0.2s; /* Opera */
+}
+
+.alien-combobox>.alien-combobox-option>li:hover{
+	padding-left: 25px;
+	background-color: #ec613b;
+}
+
+.alien-combobox>.alien-combobox-option>.active{
+	padding-left: 25px;
+	background-color: #ec613b;
+}
+
+/*datebox控件*/
+.alien-datebox{
+	position: relative;
+}
+
+.alien-datebox>.date-input{
+	cursor: pointer;
+	padding-left: 15px;
+	line-height: 40px;
+	position: relative;
+	height: 40px;
+	display: block;
+	background-color: #e5e5e5;
+	border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+}
+
+.alien-datebox>.date-input:hover{
+	background-color: #efefef;
+	box-shadow: 0px 0px 2px #f67b5a;
+	-webkit-box-shadow: 0px 0px 2px #f67b5a;
+	-moz-box-shadow: 0px 0px 2px #f67b5a;
+	-ms-box-shadow: 0px 0px 2px #f67b5a;
+	-o-box-shadow: 0px 0px 2px #f67b5a;
+}
+
+.alien-datebox>.date-input:hover>.button{
+	background-color: #f3a894;
+}
+
+.alien-datebox>.date-input>.text{
+	color: #333333;
+	font-size: 15px;
+}
+
+.alien-datebox>.date-input>.button{
+	position: absolute;
+	z-index: 10;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	right: 0px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 15px;
+	background:url(../image/icon/calendar.png) center center no-repeat #f67b5a;
+	border-radius: 0px 3px 3px 0px;
+	-o-border-radius: 0px 3px 3px 0px;
+	-ms-border-radius: 0px 3px 3px 0px;
+	-moz-border-radius: 0px 3px 3px 0px;
+	-webkit-border-radius: 0px 3px 3px 0px;
+}
+
+.alien-datebox>.date-panel{
+	filter:alpha(opacity=0); /*IE滤镜，透明度0%*/
+    -moz-opacity:0; /*Firefox私有，透明度0%*/
+	opacity:0;/*其他，透明度0%*/
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	margin: 40px 0px 0px 0px;
+	padding: 0px;
+	background-color: #e5e5e5;
+	border-radius: 3px;
+	transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-webkit-transition: all 0.3s ease-out 0s;
+}
+
+.open-status>.date-panel{
+	z-index: 100;
+	filter:alpha(opacity=100); /*IE滤镜，透明度100%*/
+    -moz-opacity:1; /*Firefox私有，透明度100%*/
+	opacity:1;/*其他，透明度100%*/
+	margin-top: 20px;
+}
+
+.alien-datebox>.date-panel:after{
+	content:"";
+	position: absolute;
+	top: -6px;
+	right: 8px;
+	width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #f67b5a;
+}
+
+.alien-datebox>.date-panel>.date-header{
+	padding: 5px 10px 0px 10px;
+	background-color: #f67b5a;
+	color: #ffffff;
+	height: 30px;
+	border-radius: 3px 3px 0px 0px;
+	-o-border-radius: 3px 3px 0px 0px;
+	-ms-border-radius: 3px 3px 0px 0px;
+	-moz-border-radius: 3px 3px 0px 0px;
+	-webkit-border-radius: 3px 0px 3px 0px;
+}
+
+.alien-datebox>.date-panel>.date-header>.year{
+	width: 50%;
+	font-size: 15px;
+	line-height: 30px;
+	height: 30px;
+	float: left;
+	text-align: center;
+}
+
+.alien-datebox>.date-panel>.date-header .btn{
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.alien-datebox>.date-panel>.date-header .btn:hover{
+	text-decoration: underline;
+}
+
+.alien-datebox>.date-panel>.date-header .right{
+	padding-right: 3px;
+	float: right;
+}
+
+.alien-datebox>.date-panel>.date-header .left{
+	padding-left: 3px;
+	float: left;
+}
+
+.alien-datebox>.date-panel>.date-header>.month{
+	width: 50%;
+	font-size: 15px;
+	line-height: 30px;
+	height: 30px;
+	float: left;
+	text-align: center;
+}
+
+.alien-datebox>.date-panel>.date-body{
+	padding: 0px 10px 10px 10px;
+}
+
+.alien-datebox>.date-panel>.date-body>.content{
+	text-align: center;
+}
+
+.alien-datebox>.date-panel>.date-body>.content>table{
+	text-align: center;
+	border-collapse:collapse;
+	width: 100%;
+	margin: 0px auto;
+	font-size: 12px;
+	transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+}
+
+.alien-datebox>.date-panel>.date-body>.content>table thead{
+	border-bottom: 1px solid #f67b5a;
+}
+
+.alien-datebox>.date-panel>.date-body>.content>table>thead .first{
+	color: #f67b5a;
+}
+
+.alien-datebox>.date-panel>.date-body>.content>table>thead .last{
+	color: #499891;
+}
+
+.alien-datebox>.date-panel>.date-body>.content>table th{
+	padding-top: 5px;
+	padding-bottom: 3px;
+}
+
+.alien-datebox>.date-panel>.date-body>.content>table>tbody td{
+	vertical-align: middle;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out 0s;
+	-o-transition: all 0.1s ease-in-out 0s;
+	-ms-transition: all 0.1s ease-in-out 0s;
+	-moz-transition: all 0.1s ease-in-out 0s;
+	-webkit-transition: all 0.1s ease-in-out 0s;
+}
+
+.alien-datebox>.date-panel>.date-body>.content>table>tbody .first{
+	color: #f67b5a;
+}
+
+.alien-datebox>.date-panel>.date-body>.content>table>tbody .last{
+	color: #499891;
+}
+
+.alien-datebox>.date-panel>.date-body>.content>table>tbody .normal:hover{
+	background-color: #7cb2ad;
+	color: #ffffff;
+	border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.alien-datebox>.date-panel>.date-body>.content>table>tbody .other{
+	color: #adadad;
+	cursor: default;
+}
+
+.alien-datebox>.date-panel>.date-body>.content>table>tbody .today{
+	background-color: #7cb2ad;
+	color: #ffffff;
+	border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+/*spinner调节框控件*/
+.alien-spinner{
+	background-color: #e5e5e5;
+	line-height: 40px;
+	position: relative;
+	height: 40px;
+	border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.alien-spinner:hover{
+	background-color: #efefef;
+	box-shadow: 0px 0px 2px #f67b5a;
+	-webkit-box-shadow: 0px 0px 2px #f67b5a;
+	-moz-box-shadow: 0px 0px 2px #f67b5a;
+	-ms-box-shadow: 0px 0px 2px #f67b5a;
+	-o-box-shadow: 0px 0px 2px #f67b5a;
+}
+
+.alien-spinner>.text{
+	color: #333333;
+	font-size: 15px;
+	padding: 0px 15px 0px 15px;
+}
+
+.alien-spinner>.control{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 30px;
+	height: 40px;
+	background-color: transparent;
+}
+
+.alien-spinner>.control>.up{
+	cursor: pointer;
+	width: 30px;
+	height: 20px;
+	background:url(../image/icon/arrow_up_s.png) center center no-repeat #f67b5a;
+	border-radius: 0px 3px 0px 0px;
+	-o-border-radius: 0px 3px 0px 0px;
+	-ms-border-radius: 0px 3px 0px 0px;
+	-moz-border-radius: 0px 3px 0px 0px;
+	-webkit-border-radius: 0px 3px 0px 0px;
+}
+
+.alien-spinner>.control>.up:hover{
+	background-color: #f3a894;
+}
+
+.alien-spinner>.control>.down{
+	cursor: pointer;
+	width: 30px;
+	height: 20px;
+	background:url(../image/icon/arrow_down_s.png) center center no-repeat #f67b5a;
+	border-radius: 0px 0px 3px 0px;
+	-o-border-radius: 0px 0px 3px 0px;
+	-ms-border-radius: 0px 0px 3px 0px;
+	-moz-border-radius: 0px 0px 3px 0px;
+	-webkit-border-radius: 0px 0px 3px 0px;
+}
+
+.alien-spinner>.control>.down:hover{
+	background-color: #f3a894;
+}
+
+/*slider滑块控件*/
+.alien-slider{
+	margin-top: 30px;
+	position: relative;
+	background-color: #7CB2AD;
+	height: 4px;
+	border-radius: 2px;
+	-o-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.alien-slider>.button{
+	cursor: pointer;
+	display: block;
+	width: 14px;
+	height: 14px;
+	background-color: #f67b5a;
+	border-radius: 7px;
+	-o-border-radius: 7px;
+	-ms-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	position: absolute;
+	top: -4px;
+	left: 0px;
+}
+
+.alien-slider>.button:hover{
+	background-color: #f3a894;
+}
+
+.alien-slider>.button>.text{
+	position: absolute;
+	top: -18px;
+	left: -1px;
+	color: #ffffff;
+	font-size: 12px;
+}
+
+/*切换开关按钮控件*/
+.toggle-button-az {
+	position: relative;
+	width: 50px;
+	height: 20px;
+	border-radius: 12px;
+	background-color: #7CB2AD;
+	box-shadow: 2px 2px 2px 0px #333333 inset;
+	-webkit-box-shadow: 2px 2px 2px 0px #333333 inset;
+	-moz-box-shadow: 2px 2px 2px 0px #333333 inset;
+	-o-box-shadow: 2px 2px 2px 0px #333333 inset;
+}
+
+.toggle-on {
+	background-color: #7CB2AD;
+}
+
+.toggle-off {
+	background-color: #999999;
+}
+
+.toggle-button-az-textLeft {
+	text-align: left;
+}
+
+.toggle-button-az-textRight {
+	text-align: right;
+}
+
+.toggle-button-az>div {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	background-color: #f67b5a;
+	top: -4px;
+	cursor: pointer;
+}
+
+.toggle-button-az>.start-on {
+	margin-left: -1px;
+}
+
+.toggle-button-az>.start-off {
+	margin-left: 25px;
+}
+
+.toggle-button-az>.on {
+	box-shadow: 2px 2px 2px 0px #333333;
+	-webkit-box-shadow: 2px 2px 2px 0px #333333;
+	-moz-box-shadow: 2px 2px 2px 0px #333333;
+	-o-box-shadow: 2px 2px 2px 0px #333333;
+}
+
+.toggle-button-az>.on:hover {
+	background-color: #f59176;
+	box-shadow: 1px 1px 2px 0px #333333;
+	-webkit-box-shadow: 1px 1px 2px 0px #333333;
+	-moz-box-shadow: 1px 1px 2px 0px #333333;
+	-o-box-shadow: 1px 1px 2px 0px #333333;
+}
+
+.toggle-button-az>.off {
+	box-shadow: -2px 2px 2px 0px #333333;
+	-webkit-box-shadow: -2px 2px 2px 0px #333333;
+	-moz-box-shadow: -2px 2px 2px 0px #333333;
+	-o-box-shadow: -2px 2px 2px 0px #333333;
+}
+
+.toggle-button-az>.off:hover {
+	background-color: #f59176;
+	box-shadow: -1px 1px 2px 0px #333333;
+	-webkit-box-shadow: -1px 1px 2px 0px #333333;
+	-moz-box-shadow: -1px 1px 2px 0px #333333;
+	-o-box-shadow: -1px 1px 2px 0px #333333;
+}
+
+.toggle-on-off {
+	animation: 0.1s ease-out 0.1s normal both 1 running toggle_on_off;
+	-webkit-animation: 0.1s ease-out 0.1s normal both 1 running toggle_on_off;
+	-moz-animation: 0.1s ease-out 0.1s normal both 1 running toggle_on_off;
+	-o-animation: 0.1s ease-out 0.1s normal both 1 running toggle_on_off;
+}
+
+@keyframes toggle_on_off {
+0% {
+    margin-left: -1px;
+}
+100% {
+   margin-left: 25px;
+}
+}
+
+@-webkit-keyframes toggle_on_off {
+0% {
+    margin-left: -1px;
+}
+100% {
+   margin-left: 25px;
+}
+}
+
+@-moz-keyframes toggle_on_off {
+0% {
+    margin-left: -1px;
+}
+100% {
+   margin-left: 25px;
+}
+}
+
+@-o-keyframes toggle_on_off {
+0% {
+    margin-left: -1px;
+}
+100% {
+   margin-left: 25px;
+}
+}
+
+.toggle-off-on{
+	animation: 0.1s ease-out 0.1s normal both 1 running toggle_off_on;
+	-webkit-animation: 0.1s ease-out 0.1s normal both 1 running toggle_off_on;
+	-moz-animation: 0.1s ease-out 0.1s normal both 1 running toggle_off_on;
+	-o-animation: 0.1s ease-out 0.1s normal both 1 running toggle_off_on;
+}
+
+@keyframes toggle_off_on {
+0% {
+    margin-left: 25px;
+}
+100% {
+   margin-left: -1px;
+}
+}
+
+@-webkit-keyframes toggle_off_on {
+0% {
+    margin-left: 25px;
+}
+100% {
+   margin-left: -1px;
+}
+}
+
+@-moz-keyframes toggle_off_on {
+0% {
+    margin-left: 25px;
+}
+100% {
+   margin-left: -1px;
+}
+}
+
+@-o-keyframes toggle_off_on {
+0% {
+    margin-left: 25px;
+}
+100% {
+   margin-left: -1px;
+}
+}
+
+/*单选按钮控件*/
+.alien-radio{
+	margin: 0;
+	padding: 0;
+}
+
+.alien-radio>li{
+	list-style : none;
+	margin-bottom: 10px;
+}
+
+.alien-radio>li>.button {
+	cursor: pointer;
+	float:left;
+	position: relative;
+	width: 14px;
+	height: 14px;
+	margin-top: 3px;
+	border: 1px solid #c1dcda;
+	border-radius: 7px;
+	-o-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-ms-border-radius: 7px;
+}
+
+.alien-radio>li>.button:hover + .text{
+	color: #f59176;
+}
+
+.alien-radio>li>.button>div {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: none;
+	top: 2px;
+	left: 2px;
+	background-color: #f67b5a;
+	border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	filter:alpha(opacity=0); /*IE滤镜，透明度0%*/
+    -moz-opacity:0; /*Firefox私有，透明度0%*/
+	opacity:0;/*其他，透明度0%*/
+	transition: all 0.1s ease-in-out 0s;
+	-o-transition: all 0.1s ease-in-out 0s;
+	-ms-transition: all 0.1s ease-in-out 0s;
+	-moz-transition: all 0.1s ease-in-out 0s;
+	-webkit-transition: all 0.1s ease-in-out 0s;
+}
+
+.alien-radio>li>.button>.chosen {
+	filter:alpha(opacity=100); /*IE滤镜，透明度100%*/
+    -moz-opacity:1; /*Firefox私有，透明度100%*/
+	opacity:1;/*其他，透明度100%*/
+}
+
+.alien-radio>li>.text{
+	cursor: pointer;
+	padding-left: 8px;
+	float: left;
+	font-size: 15px;
+	color: #ffffff;
+	transition: color 0.1s;
+    -moz-transition: color 0.1s; /* Firefox 4 */
+    -webkit-transition: color 0.1s; /* Safari 和 Chrome */
+    -o-transition: color 0.1s; /* Opera */
+}
+
+.alien-radio>li>.text:hover {
+	color: #f59176;
+}
+
+/*复选按钮控件*/
+.alien-checkbox{
+	margin: 0;
+	padding: 0;
+}
+
+.alien-checkbox>li{
+	list-style : none;
+	margin-bottom: 10px;
+}
+
+.alien-checkbox>li>.button {
+	cursor: pointer;
+	float:left;
+	position: relative;
+	width: 14px;
+	height: 14px;
+	margin-top: 3px;
+	border: 1px solid #e1e1e1;
+}
+
+.alien-checkbox>li>.button:hover + .text{
+	color: #f59176;
+}
+
+.alien-checkbox>li>.button>div {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: none;
+	top: 2px;
+	left: 2px;
+	background-color: #f67b5a;
+	filter:alpha(opacity=0); /*IE滤镜，透明度0%*/
+    -moz-opacity:0; /*Firefox私有，透明度0%*/
+	opacity:0;/*其他，透明度0%*/
+	transition: all 0.1s ease-in-out 0s;
+	-o-transition: all 0.1s ease-in-out 0s;
+	-ms-transition: all 0.1s ease-in-out 0s;
+	-moz-transition: all 0.1s ease-in-out 0s;
+	-webkit-transition: all 0.1s ease-in-out 0s;
+}
+
+.alien-checkbox>li>.button>.chosen {
+	filter:alpha(opacity=100); /*IE滤镜，透明度100%*/
+    -moz-opacity:1; /*Firefox私有，透明度100%*/
+	opacity:1;/*其他，透明度100%*/
+}
+
+.alien-checkbox>li>.text{
+	cursor: pointer;
+	padding-left: 8px;
+	float: left;
+	font-size: 15px;
+	color: #ffffff;
+	transition: color 0.1s;
+    -moz-transition: color 0.1s; /* Firefox 4 */
+    -webkit-transition: color 0.1s; /* Safari 和 Chrome */
+    -o-transition: color 0.1s; /* Opera */
+}
+
+.alien-checkbox>li>.text:hover{
+	color: #f59176;
+}
+
+/*tooltip控件*/
+.alien-tooltip{
+	position: relative;
+}
+
+.alien-tooltip>.tip-panel{
+	filter:alpha(opacity=0); /*IE滤镜，透明度0%*/
+    -moz-opacity:0; /*Firefox私有，透明度0%*/
+	opacity:0;/*其他，透明度0%*/
+	z-index: -1;
+	background-color: #f67b5a;
+	color: #ffffff;
+	padding: 10px 20px 10px 20px;
+	position: absolute;
+	text-align: left;
+	letter-spacing: 1px;
+	border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	transition: all 0.3s ease-out 0.1s;
+	-o-transition: all 0.3s ease-out 0.1s;
+	-ms-transition: all 0.3s ease-out 0.1s;
+	-moz-transition: all 0.3s ease-out 0.1s;
+	-webkit-transition: all 0.3s ease-out 0.1s;
+}
+
+.tooltip-open>.tip-panel{
+	filter:alpha(opacity=1000); /*IE滤镜，透明度0%*/
+    -moz-opacity:1; /*Firefox私有，透明度0%*/
+	opacity:1;/*其他，透明度0%*/
+	z-index: 10;
+}
+
+.alien-tooltip>.tip-top:after{
+	content:"";
+	position: absolute;
+	bottom: -6px;
+	right: 8px;
+	width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #f67b5a;
+}
+
+.alien-tooltip>.tip-bottom:after{
+	content:"";
+	position: absolute;
+	top: -6px;
+	right: 8px;
+	width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #f67b5a;
+}
+
+.alien-tooltip>.tip-left:after{
+	content:"";
+	position: absolute;
+	right: -6px;
+	top: 8px;
+	width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid #f67b5a;
+}
+
+.alien-tooltip>.tip-right:after{
+	content:"";
+	position: absolute;
+	left: -6px;
+	top: 8px;
+	width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 12px solid #f67b5a;
+}

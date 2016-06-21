@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>alienUI</title>
+    <link href="css/alien-ui.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/d3.min.js"></script>
+    <style type="text/css">
+        body{
+            background-color: #c1dcda;
+            padding: 30px 60px 30px 60px;
+        }
+
+        .dark-panel{
+            background: #191919;
+            padding: 40px 30px 45px 30px;
+        }
+
+        .dark-panel .intro-title{
+            color: #ffffff;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        .dark-panel .tool-text{
+            float: left;
+            background-color: #efb7a8;
+            padding: 20px 35px 20px 35px;
+            color: #333333;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="alien-header">INPUT</div>
+    <div class="dark-panel">
+        <div>
+            <div style="float:left;width:200px;">
+                <div class="intro-title">textbox</div>
+                <input class="alien-textbox"></input>
+            </div>
+            <div style="float:left;width:200px;margin-left:40px;">
+                <div class="intro-title">combobox</div>
+                <input class="alien-combobox"></input>
+            </div>
+            <div style="float:left;width:200px;margin-left:40px;">
+                <div class="intro-title">spinner</div>
+                <input class="alien-spinner"></input>
+            </div>
+            <div style="float:left;width:200px;margin-left:40px;">
+                <div class="intro-title">datebox</div>
+                <input class="alien-datebox"></input>
+            </div>
+            <div style="float:left;width:200px;margin-left:40px;">
+                <div class="intro-title">searchbox</div>
+                <input id="this-search" class="alien-searchbox"></input>
+            </div>
+            <div class="alien-clear"></div>
+        </div>
+        <div style="margin-top:30px;padding-top:30px;border-top:1px dashed #c1dcda;">
+            <div style="float:left;width:200px;">
+                <div class="intro-title">radio</div>
+                <input id="radio" class="alien-radio"></input>
+            </div>
+            <div style="float:left;width:200px;">
+                <div class="intro-title">checkbox</div>
+                <input id="checkbox" class="alien-checkbox"></input>
+            </div>
+            <div style="float:left;width:200px;">
+                <div class="intro-title">toggle</div>
+                <input id="toggle-on" class="alien-toggle" style="margin-top:20px;"></input>
+                <input id="toggle-off" class="alien-toggle" style="margin-top:30px;"></input>
+            </div>
+            <div style="float:left;width:200px;">
+                <div class="intro-title">slider</div>
+                <input id="slider1" class="alien-slider"></input>
+                <input id="slider2" class="alien-slider"></input>
+            </div>
+            <div class="alien-clear"></div>
+        </div>
+    </div>
+
+    <div class="alien-header" style="margin-top:30px;">TOOLTIP</div>
+    <div class="dark-panel">
+        <div style="padding-left:5%;padding-right:5%">
+            <div id="tooltip-top" class="tool-text alien-tooltip" style="width:35%;text-align:center;float:left">
+                火影忍者终极风暴按键指南A
+            </div>
+            <div id="tooltip-bottom" class="tool-text alien-tooltip" style="width:35%;text-align:center;float:right">
+                火影忍者终极风暴按键指南B
+            </div>
+            <div class="alien-clear"></div>
+        </div>
+        <div style="margin-top:30px;padding-left:5%;padding-right:5%">
+            <div id="tooltip-right" class="tool-text alien-tooltip" style="width:35%;text-align:center;float:left">
+                火影忍者终极风暴按键指南C
+            </div>
+            <div id="tooltip-left" class="tool-text alien-tooltip" style="width:35%;text-align:center;float:right">
+                火影忍者终极风暴按键指南D
+            </div>
+            <div class="alien-clear"></div>
+        </div>
+    </div>
+
+    <script src="js/alien.ui.textbox.js"></script>
+    <script src="js/alien.ui.toggle.js"></script>
+    <script src="js/alien.ui.radio.js"></script>
+    <script src="js/alien.ui.checkbox.js"></script>
+    <script src="js/alien.ui.combobox.js"></script>
+    <script src="js/alien.ui.datebox.js"></script>
+    <script src="js/alien.ui.searchbox.js"></script>
+    <script src="js/alien.ui.spinner.js"></script>
+    <script src="js/alien.ui.slider.js"></script>
+    <script src="js/alien.ui.header.js"></script>
+    <script src="js/alien.ui.tooltip.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
