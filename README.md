@@ -1,2 +1,2 @@
 # alienUI
-a set of simple UI components
+a set of simple UI components for jquery
